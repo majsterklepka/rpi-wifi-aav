@@ -17,13 +17,13 @@ Nie będę tu opisywać co należy zrobić aby nasza Malinka ruszyła, na ten te
 
 po instalacji hostapd należy zrobić kopię bezpieczeństwa jego plików konfiguracyjnych, w folderze /etc/hostapd należy umieścić plik hostapd.conf modyfikując go do własnych potrzeb. 
 
-Jeśli dnsmasq jest niezainstalowane, to należy go zainstalować i zrobić to co poprzednio, czyli w folderze /etc umieścić plik konfiguracyjny dnsmasq.conf
+Jeśli dnsmasq jest niezainstalowane, to należy go zainstalować i zrobić to co poprzednio, czyli w folderze /etc umieścić plik konfiguracyjny dnsmasq.conf modyfikując go odpowiednio do własnych potrzeb
 
 Następnie aby mieć dostęp do portu Ethernet należy go połączyć mostkiem z interfejsem wlan0, najpierw należy utworzyć mostek poleceniem:
 
 ```
 brctl addbr br0
-brctl addif br0 eth0
+brctl addif br0 eth0 wlan0
 ```
 
 Następnie należy w folderze /etc/network zmodyfikować plik interfaces(można go skopiować z repozytorium, uprzednio robiąc kopię oryginału)
@@ -31,6 +31,8 @@ Następnie należy w folderze /etc/network zmodyfikować plik interfaces(można 
 - - - 
 
 ciąg dalszy nastąpi ...
+
+- - - 
 
 do zrobienia:
 
